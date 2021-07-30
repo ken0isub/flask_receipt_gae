@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+<a href="http://127.0.0.1:5000/">index</a>
+</div>
+
+<div>
+<img src="{{ filepath.public_url }}", width=200>
+</div>
+
+<div class="input-form">
+    <form method='POST' enctype="multipart/form-data">
+        <h3 class="">Receipt information</h3>
+
+        <p>store</p>
+        <input type="text" value="{{ store }}" name="store">
+
+        <p>date</p>
+        <input type="text" value="{{ date }}" name="date">
+
+        <p>total price</p>
+        <input type="text" value="{{ price }}" name="price">
+
+        <p>category</p>
+        <select name="category", size="1" name="category">
+        <option value="">select</option>
+        <option value="grocery">grocery</option>
+        <option value="daily use">daily use</option>
+        <option value="hobby">hobby</option>
+        </select>
+
+        <p>who</p>
+        <select name="who", size="1" name="who">
+        <option value="">select</option>
+        <option value="Ken">Ken</option>
+        <option value="Taro">Taro</option>
+        <option value="Iso">Iso</option>
+        </select>
+
+        <p>points</p>
+        <input type="text" value="{{ discount }}" name="point">
+
+        <p>note</p>
+        <input type="text" value="" name="note">
+
+        <p>write to spread sheet</p>
+        <input class="receipt-submit" type="submit" value="write">
+    </form>
+</div>
+
+
+
+</body>
+</html>
